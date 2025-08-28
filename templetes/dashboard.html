@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Top Bar -->
+<div class="flex justify-between items-center mb-6">
+  <input type="text" placeholder="Search..." class="input input-bordered w-1/3" />
+  <button class="btn btn-warning">+ New Task</button>
+</div>
+
+<!-- Grid Layout -->
+<div class="grid grid-cols-3 gap-6">
+
+  <!-- Calendar -->
+  <div class="col-span-1 card bg-white shadow p-4">
+    <h2 class="font-bold mb-2">📅 March 2022</h2>
+    <input type="date" class="input input-bordered w-full" />
+  </div>
+
+  <!-- Tasks -->
+  <div class="col-span-2 card bg-white shadow p-4">
+    <h2 class="font-bold mb-2">📝 My tasks</h2>
+    <ul class="space-y-2">
+      <li class="flex items-center justify-between p-2 border-b">
+        <span>Contract signing</span> <span class="badge badge-warning">Today</span>
+      </li>
+      <li class="flex items-center justify-between p-2 border-b">
+        <span>Project research</span> <span class="badge badge-info">Tomorrow</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Categories -->
+  <div class="col-span-1 card bg-white shadow p-4">
+    <h2 class="font-bold mb-2">📂 My categories</h2>
+    <ul>
+      <li>💼 Work</li>
+      <li>👨‍👩‍👧 Family</li>
+      <li>🎯 Freelance</li>
+    </ul>
+  </div>
+
+  <!-- Tracking -->
+  <div class="col-span-2 card bg-white shadow p-4">
+    <h2 class="font-bold mb-2">⏱ My tracking</h2>
+    <div class="flex justify-between p-2 border-b">
+      <span>Create wireframe</span> <span>1h 25m</span>
+    </div>
+    <div class="flex justify-between p-2 border-b">
+      <span>Dashboard design</span> <span>1h 48m</span>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

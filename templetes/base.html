@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-yellow-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-lg flex flex-col p-4">
+    <div class="flex items-center gap-2 mb-6">
+      <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold">AZ</div>
+      <h1 class="text-xl font-semibold">Organizo</h1>
+    </div>
+    <nav class="flex-1">
+      <ul class="menu">
+        <li><a href="/">📊 Dashboard</a></li>
+        <li><a href="#">✅ My tasks</a></li>
+        <li><a href="#">🔔 Notifications</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-outline btn-sm mt-4">Log out</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>
